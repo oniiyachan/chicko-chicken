@@ -37,7 +37,6 @@ import RecoverPassword from "./pages/auth/RecoverPassword";
 import Register from "./pages/auth/Register";
 import Verify from "./pages/auth/Verify";
 import Dashboard from "./pages/dashboard/Index";
-import ChooseType from "./pages/dashboard/ChooseType";
 import TopCategories from "./pages/dashboard/TopCategories";
 import AddAddress from "./pages/locations/AddAddress";
 import ManageAddress from "./pages/locations/ManageAddress";
@@ -45,6 +44,8 @@ import Cart from "./pages/shop/Cart";
 import Notifications from "./pages/shop/Notifications";
 import Payment from "./pages/shop/Payment";
 import Store from "./pages/shop/Store";
+
+import Dashboard2 from "./pages/dashboard2/Index";
 
 import Intro from "./pages/intro/index";
 import { Plugins } from "@capacitor/core";
@@ -92,7 +93,9 @@ const App: React.FC = () => {
             <Route path={`/auth/logout`} component={Logout} exact={true} />
 
             <Route path="/dashboard" component={Dashboard} />
-            <Route path="/choosetype" component={ChooseType} />
+
+            <Route path="/dashboard2" component={Dashboard2} />
+
             <PrivateRoute path="/shop/:id" component={Store} />
             <PrivateRoute path="/top_category/:id" component={TopCategories} />
 

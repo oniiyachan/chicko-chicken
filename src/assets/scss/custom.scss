@@ -3,9 +3,9 @@ ion-tab-bar {
   border-top: 0.0625rem solid #e2e2e2 !important;
 }
 ion-tab-button {
-  --color: #32325d;
-  --color-selected: #fe8403;
-  --ripple-color: #ff8b00;
+  --color: #222222;
+  --color-selected: #0058df;
+  --ripple-color: #0058df;
 }
 
 ion-content {
@@ -54,3 +54,31 @@ ion-content {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff',endColorstr='#007db9e8',GradientType=1);
   }
 }
+
+ion-select {
+  color: #b61120 !important;
+  padding-left: 0;
+}
+
+ion-select::part(icon) {
+  opacity: 0;
+}
+ion-select::part(text)::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-left: 1px solid #b61120;
+  border-top: 1px solid #b61120;
+  transform: rotate(-135deg);
+  right: 40px;
+  top: 15px
+}
+ion-badge {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  width: 20px;
+  border-radius: 10px;
+}
+

@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Background from "../../assets/img/intro/background.png";
 import styled from "styled-components";
+import Container from "../../components/Shared/Container";
 // reactstrap components
 import {
   Button,
@@ -58,14 +59,7 @@ const ChooseType: React.FC = (props: any) => {
   return (
     <IonPage>
       <IonContent>
-        <div
-          style={{
-            background: "url(" + Background + ") no-repeat center center fixed",
-            height: "100%",
-            padding: "0 20px",
-            width: "100%",
-          }}
-        >
+        <Container>
           <img src="" alt="" />
           <div className="text-center text-muted mb-3 px-5 pt-7">
             {/* <p className="h3">Welcome</p> */}
@@ -97,7 +91,7 @@ const ChooseType: React.FC = (props: any) => {
               <div>Delivery to your home</div>
             </div>
           </Type>
-        </div>
+        </Container>
 
         <IonLoading isOpen={props.state.request} message={"Please wait..."} />
       </IonContent>

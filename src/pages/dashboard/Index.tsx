@@ -1,15 +1,27 @@
-import { IonIcon, IonLabel, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs } from '@ionic/react';
-import { compassOutline, personOutline, receiptOutline, searchOutline } from 'ionicons/icons';
-import React from 'react';
-import { Redirect } from 'react-router-dom';
-import PrivateRoute from '../../helpers/privateRoutes';
-import Home from './Home';
-import Orders from './Orders';
-import Profile from './Profile';
-import Search from './Search';
+import {
+  IonIcon,
+  IonLabel,
+  IonRouterOutlet,
+  IonTabBar,
+  IonTabButton,
+  IonTabs,
+} from "@ionic/react";
+import {
+  compassOutline,
+  personOutline,
+  receiptOutline,
+  searchOutline,
+} from "ionicons/icons";
+import React from "react";
+import { Redirect } from "react-router-dom";
+import PrivateRoute from "../../helpers/privateRoutes";
+import Home from "./Home";
+import Orders from "./Orders";
+import Profile from "./Profile";
+import Search from "./Search";
 
 interface RouteProps {
-  match?: any,
+  match?: any;
 }
 
 const DashboardIndex: React.FC<RouteProps> = ({ match }) => (
@@ -17,8 +29,16 @@ const DashboardIndex: React.FC<RouteProps> = ({ match }) => (
     <IonRouterOutlet>
       <Redirect exact from={`${match.url}/`} to={`${match.url}/home`} />
       <PrivateRoute path={`${match.url}/home`} component={Home} exact={true} />
-      <PrivateRoute path={`${match.url}/search`} component={Search} exact={true} />
-      <PrivateRoute path={`${match.url}/orders`} component={Orders} exact={true} />
+      <PrivateRoute
+        path={`${match.url}/search`}
+        component={Search}
+        exact={true}
+      />
+      <PrivateRoute
+        path={`${match.url}/orders`}
+        component={Orders}
+        exact={true}
+      />
       <PrivateRoute path={`${match.url}/profile`} component={Profile} />
     </IonRouterOutlet>
     <IonTabBar slot="bottom">

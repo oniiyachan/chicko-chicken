@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Container from "../../components/Shared/Container";
+import Input from "../../components/Shared/Input";
 // reactstrap components
 import {
   Button,
@@ -13,7 +14,6 @@ import {
   Col,
   Form,
   FormGroup,
-  Input,
   InputGroup,
   InputGroupAddon,
   InputGroupText,
@@ -45,75 +45,25 @@ const Login: React.FC = (props: any) => {
             />
           </div>
           <Form role="form" onSubmit={onSubmit}>
-            <div
-              style={{
-                backgroundColor: "#fff",
-                boxShadow: "0px 0px 5px -2px #9E9E9E",
-                borderRadius: 20,
-                marginBottom: 15,
-                padding: "12px 15px",
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              <label htmlFor="email" style={{ marginBottom: 5 }}>
-                <img
-                  src={
-                    require("../../assets/img/icons/common/mail.svg").default
-                  }
-                  alt=""
-                />
-              </label>
-              <input
-                type="email"
-                name="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                style={{
-                  backgroundColor: "#fff",
-                  border: "none",
-                  marginLeft: 15,
-                  width: "100%",
-                }}
-                placeholder="Email"
-              />
-            </div>
-            <div
-              style={{
-                backgroundColor: "#fff",
-                boxShadow: "0px 0px 5px -2px #9E9E9E",
-                borderRadius: 20,
-                marginBottom: 15,
-                padding: "12px 15px",
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              <label htmlFor="email" style={{ marginBottom: 5 }}>
-                <img
-                  src={
-                    require("../../assets/img/icons/common/lock.svg").default
-                  }
-                  alt=""
-                />
-              </label>
-              <input
-                type="password"
-                name="password"
-                autoComplete="off"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-                style={{
-                  backgroundColor: "#fff",
-                  border: "none",
-                  marginLeft: 15,
-                  width: "100%",
-                }}
-                placeholder="Password"
-              />
-            </div>
+            <Input
+              type="email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required={true}
+              placeholder="Email"
+              icon={require("../../assets/img/icons/common/mail.svg").default}
+            ></Input>
+            <Input
+              type="password"
+              name="password"
+              autoComplete="off"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              placeholder="Password"
+              icon={require("../../assets/img/icons/common/lock.svg").default}
+            ></Input>
 
             {props.state.errorMsg && (
               <UncontrolledAlert color="warning">
@@ -123,7 +73,7 @@ const Login: React.FC = (props: any) => {
             <div className="text-left text-muted mb-3">
               <span>
                 <Link
-                  style={{ color: "#707070", fontSize: 14 }}
+                  style={{ color: "#707070", fontSize: 13 }}
                   to="/auth/recover"
                 >
                   Forgot Password?
@@ -138,8 +88,8 @@ const Login: React.FC = (props: any) => {
                   color: "#fff",
                   width: "100%",
                   borderRadius: 25,
-                  height: 47,
-                  fontSize: 18,
+                  height: 42,
+                  fontSize: 16,
                 }}
               >
                 LOGIN
@@ -147,8 +97,8 @@ const Login: React.FC = (props: any) => {
             </div>
           </Form>
 
-          <div className="text-center text-muted my-4">
-            <span style={{ color: "#707070" }}>
+          <div className="text-center text-muted my-2">
+            <span style={{ color: "#707070", fontSize: 14 }}>
               Don't have an account?
               <Link
                 className="ml-2"
