@@ -10,7 +10,7 @@
 
 # production
 /build
-/android
+/ios
 
 # misc
 .DS_Store

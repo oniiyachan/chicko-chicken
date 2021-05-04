@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Foodlicious</string>
+    <string name="title_activity_main">Foodlicious</string>
+    <string name="package_name">ml.foodlicious</string>
+    <string name="custom_url_scheme">ml.foodlicious</string>
+</resources>

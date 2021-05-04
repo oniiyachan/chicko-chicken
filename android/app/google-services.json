@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "777067842987",
+    "project_id": "codecanyon-66e4c",
+    "storage_bucket": "codecanyon-66e4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777067842987:android:4a967cd622557d7a4816ee",
+        "android_client_info": {
+          "package_name": "ml.foodlicious"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777067842987-jd3kp46gvednsn5v1a8l139i8nvgspof.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ml.foodlicious",
+            "certificate_hash": "4a4c072c0aa6c43c21a1f2d4cbe186a363cb43b6"
+          }
+        },
+        {
+          "client_id": "777067842987-n2quldqrmv6h0n9ehelhd1itdfac41k8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDI_UnGQquYj_5Bfu-qHJkR6skRKw8_Mmw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777067842987-n2quldqrmv6h0n9ehelhd1itdfac41k8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
