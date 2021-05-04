@@ -3,7 +3,7 @@ import { url } from "inspector";
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import Background from "../../assets/img/intro/background.png";
+import Container from "../../components/Shared/Container";
 // reactstrap components
 import {
   Button,
@@ -34,17 +34,8 @@ const Login: React.FC = (props: any) => {
   return (
     <IonPage>
       <IonContent>
-        <div
-          style={{
-            background: "url(" + Background + ") no-repeat center center fixed",
-            height: "100%",
-            padding: "0 20px",
-            width: "100%",
-          }}
-        >
-          <img src="" alt="" />
+        <Container>
           <div className="text-center text-muted mb-3 px-5 pt-7">
-            {/* <p className="h3">Welcome</p> */}
             <img
               src={
                 require("../../assets/img/intro/logo-chicko-chicken.png")
@@ -168,7 +159,7 @@ const Login: React.FC = (props: any) => {
               </Link>
             </span>
           </div>
-        </div>
+        </Container>
 
         <IonLoading isOpen={props.state.request} message={"Please wait..."} />
       </IonContent>
