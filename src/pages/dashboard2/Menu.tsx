@@ -23,6 +23,7 @@ const Menu: React.FC = (props: any) => {
         <div style={{ display: "flex", alignItems: "center" }}>
           <div style={{ width: "90%" }}>
             <IonSelect
+              className="menu"
               value={gender}
               placeholder="Select One"
               onIonChange={(e) => setGender(e.detail.value)}
@@ -32,19 +33,21 @@ const Menu: React.FC = (props: any) => {
               <IonSelectOption value="delivery">Delivery</IonSelectOption>
               <IonSelectOption value="pickup">Pickup</IonSelectOption>
             </IonSelect>
-            <div>
+            <div style={{ fontWeight: "bold" }}>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </div>
           </div>
           <div>
-            <img
-              src={require("../../assets/img/icons/common/ring.svg").default}
-              alt=""
-            />
-            <IonBadge color="danger" slot="start">
-              1
-            </IonBadge>
+            <div style={{ position: "relative" }}>
+              <img
+                src={require("../../assets/img/icons/common/ring.svg").default}
+                alt=""
+              />
+              <IonBadge color="danger" slot="start">
+                1
+              </IonBadge>
+            </div>
           </div>
         </div>
       </Container>
