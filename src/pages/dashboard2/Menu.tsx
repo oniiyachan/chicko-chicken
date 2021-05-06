@@ -13,6 +13,9 @@ import {
   IonBadge,
 } from "@ionic/react";
 import Container from "../../components/Shared/Container";
+import styled from "styled-components";
+
+const Banner = styled.div``;
 
 const Menu: React.FC = (props: any) => {
   const [gender, setGender] = useState<string>("delivery");
@@ -50,6 +53,7 @@ const Menu: React.FC = (props: any) => {
             </div>
           </div>
         </div>
+        <Banner background=""></Banner>
       </Container>
     </IonPage>
   );
