@@ -18,23 +18,9 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 // reactstrap components
-import {
-  Button,
-  Card,
-  CardBody,
-  CardImg,
-  Col,
-  Form,
-  FormGroup,
-  Input,
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText,
-  Row,
-  UncontrolledAlert,
-} from "reactstrap";
+import Container from "../../components/Shared/Container";
 
-const productpayment: React.FC = (props: any) => {
+const ProductPayment: React.FC = (props: any) => {
   return (
     <IonPage>
       <IonHeader className="h-ion-header">
@@ -51,6 +37,7 @@ const productpayment: React.FC = (props: any) => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
+        <Container>
         <div className="h-flex pt-20">
           <div className="col-12">
             <div className="h-form-ordertime h-bgr-fff">
@@ -201,6 +188,7 @@ const productpayment: React.FC = (props: any) => {
             </div>
           </div>
         </div>
+        </Container>
       </IonContent>
       {/* <div className="h-footer-alws-bottom button-inner h-flex a-center h-space-around">
           <div className="col-3 h-footer-payment__icon h-flex j-center h-flex-column h-pl-30">
@@ -244,4 +232,4 @@ const productpayment: React.FC = (props: any) => {
     </IonPage>
   );
 };
-export default productpayment;
+export default ProductPayment;

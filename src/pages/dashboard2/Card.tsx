@@ -12,24 +12,7 @@ import {
 } from "@ionic/react";
 import "./home.css";
 import React from "react";
-import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-// reactstrap components
-import {
-  Button,
-  Card,
-  CardBody,
-  CardImg,
-  Col,
-  Form,
-  FormGroup,
-  Input,
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText,
-  Row,
-  UncontrolledAlert,
-} from "reactstrap";
+import Header from "../../components/Shared/Header";
 
 const CardInfo: React.FC = (props: any) => {
   return (
@@ -48,6 +31,7 @@ const CardInfo: React.FC = (props: any) => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
+        <Header name="Hao"></Header>
         <br />
         <div className="h-flex">
           <div className="col-12">

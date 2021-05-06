@@ -86,12 +86,12 @@ const ProductDetail: React.FC = (props: any) => {
               </label>
               <div className="h-form-ordertime h-bgr-fff">
                 <div className="h-flex h-pt-5 h-pb-5  h-line-e3e3e3">
-                  <div className="col-12 h-flex h-between a-center h-radio">
-                    <label htmlFor="abc" className=" pt-10">
-                      Original
-                    </label>
+                <IonItem className="hao">
+                    
+                    <IonLabel>Original</IonLabel>
+          
                     <IonCheckbox slot="end" color="primary" />
-                  </div>
+                  </IonItem>
                 </div>
                 <div className="h-flex h-pt-5 h-pb-5  h-line-e3e3e3">
                   <div className="col-12 h-flex h-between a-center">
