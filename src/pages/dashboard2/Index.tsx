@@ -19,6 +19,12 @@ import Menu from "./Menu";
 import Rewards from "./Rewards";
 import Profile from "./Profile";
 import Orders from "./Orders";
+import Pages from "./Pages";
+import UserDetail from "./UserDetail";
+import CardInfo from "./Card";
+import OrderTime from "./OrderTime";
+import ProductDetail from "./ProductDetail";
+import ProductPayment from "./ProductPayment";
 
 interface RouteProps {
   match?: any;
@@ -57,7 +63,37 @@ const DashboardIndex: React.FC<RouteProps> = ({ match }) => {
           component={Orders}
           exact={true}
         />
+        <PrivateRoute
+          path={`${match.url}/pages`}
+          component={Pages}
+          exact={true}
+        />
         <PrivateRoute path={`${match.url}/profile`} component={Profile} />
+        <PrivateRoute
+          path={`${match.url}/pages/home`}
+          component={UserDetail}
+          exact={true}
+        />
+        <PrivateRoute
+          path={`${match.url}/pages/card`}
+          component={CardInfo}
+          exact={true}
+        />
+        <PrivateRoute
+          path={`${match.url}/pages/ordertime`}
+          component={OrderTime}
+          exact={true}
+        />
+        <PrivateRoute
+          path={`${match.url}/pages/productdetail`}
+          component={ProductDetail}
+          exact={true}
+        />
+        <PrivateRoute
+          path={`${match.url}/pages/productpayment`}
+          component={ProductPayment}
+          exact={true}
+        />
       </IonRouterOutlet>
 
       <IonTabBar slot="bottom">
@@ -98,6 +134,16 @@ const DashboardIndex: React.FC<RouteProps> = ({ match }) => {
             }
           />
           <IonLabel>Profile</IonLabel>
+        </IonTabButton>
+        <IonTabButton tab="pages" href={`${match.url}/pages`}>
+          <IonIcon
+            src={
+              window.location.pathname.includes("/dashboard2/pages")
+                ? ordersActive
+                : orders
+            }
+          />
+          <IonLabel>List Pages</IonLabel>
         </IonTabButton>
       </IonTabBar>
     </IonTabs>
