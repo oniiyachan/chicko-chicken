@@ -26,7 +26,7 @@ const ProductPayment: React.FC = (props: any) => {
       <IonHeader className="h-ion-header">
         <IonToolbar>
           <IonTitle class="h-center-text-bold h-color-black">
-            Burnaby ( Edmonds)
+            Burnaby (Edmonds)
           </IonTitle>
           <img
             src={
